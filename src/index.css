@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f1f1f1;
+}
+
+.nav-hover-effect {
+  @apply relative block  rounded    border-b border-stone-600  bg-stone-700 py-2 px-1 text-xs tracking-[1px] text-white transition-all   duration-300   hover:text-stone-200 dark:border-slate-300    dark:bg-slate-600 dark:text-slate-100 md:border-0 md:bg-transparent xl:pl-3  xl:pr-4 xl:text-sm;
+}
+.nav-hover-effect::after {
+  @apply absolute left-3 -bottom-[1px] h-[1px] w-[0%] rounded-xl bg-white duration-500 content-[''];
+}
+
+.nav-hover-effect:hover::after {
+  @apply w-[70%];
+}
+.nav-sub-items {
+  @apply block bg-gray-200 py-2 px-4 text-sm text-gray-200 transition-all duration-150 hover:scale-105  hover:text-stone-600  dark:bg-gray-200   dark:text-gray-600 xl:text-sm;
+}
+.project-sort-list {
+  @apply block bg-slate-600 py-2 px-4  text-xs text-gray-200 transition-all duration-150 hover:scale-105 hover:text-stone-600  dark:bg-slate-600     dark:text-gray-600 lg:text-sm;
+}
+.topbar-item-hover {
+  @apply text-white duration-500  hover:scale-150 dark:text-slate-200;
+}
+
+.footer-item-hover {
+  @apply mr-6 text-stone-800 decoration-stone-600 duration-200  hover:text-stone-500 hover:underline dark:text-slate-200  dark:decoration-slate-200 dark:hover:text-slate-300;
+}
